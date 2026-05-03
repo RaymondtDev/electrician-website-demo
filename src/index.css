@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Oswald:wght@200..700");
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import "tailwindcss";
+
+* {
+  @apply box-border;
+}
+
+@theme {
+  --color-primary: #00001a;
+  --color-primary-100: #8a8aff;
+  --color-secondary: #ff4400;
+  --color-accent: #e7e7e7;
+  --font-heading: "Oswald", sans-serif;
+  --font-paragraph: "IMB Plex Sans", sans-serif;
+}
+
+body {
+  @apply font-paragraph m-0 p-0;
+}
+
+h1 {
+  @apply text-3xl md:text-4xl font-extrabold;
+}
+h2 {
+  @apply text-2xl md:text-3xl font-bold;
+}
+h3 {
+  @apply text-xl md:text-2xl font-semibold;
+}
+h4 {
+  @apply text-xl font-medium;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-heading;
+}
+
+li {
+  @apply list-disc list-inside marker:text-secondary;
+}
+
+input,
+textarea {
+  @apply p-2 bg-accent rounded-sm shadow-inner w-full;
+}
+
+select {
+  @apply p-2 bg-primary text-white rounded-sm w-full;
+}
+
+label {
+  @apply my-1;
+}
+
+.img {
+  @apply w-full h-auto md:h-full object-cover md:absolute rounded-sm;
+}
+
+.overlay {
+  border-image: fill 0 linear-gradient(to right, #000000cc, #00000000);
+}
+
+.grid-layout {
+  @apply grid grid-cols-1 sm:grid-cols-[1fr_99vw_1fr] lg:grid-cols-[1fr_80vw_1fr];
+
+  > * {
+    @apply col-start-2 -col-end-2;
+  }
+
+  > .full-width {
+    @apply col-start-1 -col-end-1;
+  }
+}
+
+.link-btn {
+  @apply px-6 py-4 rounded-sm bg-secondary text-white cursor-pointer hover:scale-105 transition;
+}
+
+.hero-stat {
+  > span {
+    @apply text-3xl font-extrabold font-heading;
+  }
+
+  > p {
+    @apply uppercase;
+  }
+}
+
+.service-card {
+  @apply max-w-80 text-center flex flex-col items-center;
+}
