@@ -40,6 +40,9 @@ export default function Footer() {
             <li className="hover:text-secondary">
               <Link to="/about">About</Link>
             </li>
+            <li>
+              <Link to="/about/#FAQs">FAQs</Link>
+            </li>
           </ul>
           <LinkButton text="Contact Us" path="/contact" />
         </div>

@@ -28,7 +28,7 @@ export default function FAQSection() {
     },
   ];
   return (
-    <section className="full-width grid-layout bg-white py-12">
+    <section className="full-width grid-layout bg-white py-12" id="FAQs">
       <h2 className="text-primary text-center capitalize">
         Frequently asked questions
       </h2>

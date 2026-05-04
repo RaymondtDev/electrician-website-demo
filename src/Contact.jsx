@@ -1,4 +1,18 @@
+import { useState } from "react";
+
 export default function Contact() {
+  const [message, setMessage] = useState(null);
+
+  const handleSumbit = (e) => {
+    e.preventDefault();
+
+    setMessage("This is a demo site, thank your for visiting");
+
+    setTimeout(() => {
+      setMessage(null);
+    }, 5000);
+  };
+
   return (
     <>
       <section className="full-width grid-layout bg-[url(/images/services-hero-bg.jpg)] bg-cover overlay py-12 text-white px-2 md:px-0 text-center">
@@ -21,7 +35,7 @@ export default function Contact() {
                 href="tel: +27623456789"
                 className="text-secondary hover:underline"
               >
-                062 345 6789
+                079 123 4567
               </a>
               .
             </p>
@@ -34,7 +48,12 @@ export default function Contact() {
             </ul>
           </div>
           <div className="mt-6 md:mt-0">
-            <form>
+            <form onSubmit={handleSumbit}>
+              {message && (
+                <p className="text-center text-secondary font-bold capitalize">
+                  {message}
+                </p>
+              )}
               <div className="grid grid-cols-2 gap-2">
                 <label htmlFor="name" className="flex flex-col">
                   First Name
