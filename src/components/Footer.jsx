@@ -16,13 +16,13 @@ export default function Footer() {
             <h3 className="text-secondary font-bold">Electrical Solutions</h3>
           </div>
           <div className="flex md:justify-center gap-4 mt-4">
-            <a href="#">
+            <a href="facebook.com" target="blank">
               <Icon src="/icons/facebook-icon.svg" />
             </a>
-            <a href="#">
+            <a href="instagram.com" target="blank">
               <Icon src="/icons/instagram-icon.svg" />
             </a>
-            <a href="#">
+            <a href="x.com" target="blank">
               <Icon src="/icons/twitter-icon.svg" />
             </a>
           </div>

@@ -4,8 +4,8 @@ import Icon from "./Icon";
 export default function ArrowLink({ path }) {
   return (
     <Link to={path} className="flex items-center">
-      <p className="text-secondary">More Info</p>
+      <p className="text-secondary">Learn More</p>
       <Icon src="/icons/arrow-icon.svg" />
     </Link>
-  )
+  );
 }
